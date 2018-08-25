@@ -5,10 +5,23 @@ from __future__ import unicode_literals
 AUTHOR = 'Mt Taka'
 SITENAME = 'D3C blog'
 SITEURL = ''
+DEFAULT_DATE_FORMAT = '%Y/%m/%d(%a)'
+
+# markdown extention
+MARKDOWN = {
+    'extension_configs' : {
+        'markdown.extensions.codehilite' : {'css_class': 'highlight'},
+        'markdown.extensions.tables' : {},
+        'markdown.extensions.fenced_code' : {},
+        'linkify': {},
+        'del_ins': {},
+        'nl2br': {}
+    }
+}
 
 # Plugin
 PLUGIN_PATHS = ['../pelican-plugins', ]
-PLUGINS = ['i18n_subsites', 'liquid_tags.notebook', ]
+PLUGINS = ['i18n_subsites', 'liquid_tags.notebook', 'tag_cloud', ]
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n'],}
 
 # Themes
@@ -25,7 +38,11 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
 
-# サイドバー
+## Pygments Style
+PYGMENTS_STYLE = 'autumn'
+
+## サイドバー
+ABOUT_ME = "著者の解説。このブログは技術習得のための学習記録が中心になるかと思う。"
 DISPLAY_ARCHIVE_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
@@ -33,7 +50,7 @@ DISPLAY_TAGS_INLINE = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 RECENT_POST_COUNT = 5
 
-# ソーシャルボタン
+## ソーシャルボタン
 ADDTHIS_PROFILE = "ra-5b8116442bd6e8ad"
 
 
