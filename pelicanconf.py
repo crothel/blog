@@ -28,6 +28,9 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n'],}
 THEME = '../pelican-themes/pelican-bootstrap3'
 
 # pelican-boostrap3 Setting
+## Google Analytics
+GOOGLE_ANALYTICS_UNIVERSAL = True
+GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = "UA-124570016-1"
 ## 各記事のヘッダー
 SHOW_ARTICLE_CATEGORY = False
 SHOW_DATE_MODIFIED = True
