@@ -8,11 +8,35 @@ SITEURL = ''
 
 # Plugin
 PLUGIN_PATHS = ['../pelican-plugins', ]
-PLUGINS = ['i18n_subsites', ]
+PLUGINS = ['i18n_subsites', 'liquid_tags.notebook', ]
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n'],}
 
 # Themes
 THEME = '../pelican-themes/pelican-bootstrap3'
+
+# pelican-boostrap3 Setting
+## 各記事のヘッダー
+SHOW_ARTICLE_CATEGORY = False
+SHOW_DATE_MODIFIED = True
+##ヘッダーのパンくずにカテゴリ表示
+DISPLAY_BREADCRUMBS = True
+DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = True
+
+# サイドバー
+DISPLAY_ARCHIVE_ON_SIDEBAR = True
+DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_TAGS_INLINE = False
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+RECENT_POST_COUNT = 5
+
+# ソーシャルボタン
+ADDTHIS_PROFILE = "ra-5b8116442bd6e8ad"
+
+
 
 PATH = 'content'
 
@@ -27,15 +51,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
