@@ -43,6 +43,7 @@ DISPLAY_CATEGORIES_ON_MENU = True
 
 ## Pygments Style
 PYGMENTS_STYLE = 'autumn'
+BOOTSTRAP_THEME = 'flatly'
 
 ## サイドバー
 ABOUT_ME = "著者の解説。このブログは技術習得のための学習記録が中心になるかと思う。"
