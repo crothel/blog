@@ -2,12 +2,19 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Mt_Taka'
+AUTHOR = 'Mt Taka'
 SITENAME = 'D3C blog'
 SITEURL = ''
 
+# Plugin
+PLUGIN_PATHS = ['../pelican-plugins', ]
+PLUGINS = ['i18n_subsites', ]
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.i18n'],
+}
+
 # Themes
-THEME = '../pelican-themes/bootstrap2'
+THEME = '../pelican-themes/pelican-bootstrap3'
 
 PATH = 'content'
 
