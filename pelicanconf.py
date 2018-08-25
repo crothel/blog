@@ -9,9 +9,7 @@ SITEURL = ''
 # Plugin
 PLUGIN_PATHS = ['../pelican-plugins', ]
 PLUGINS = ['i18n_subsites', ]
-JINJA_ENVIRONMENT = {
-    'extensions': ['jinja2.ext.i18n'],
-}
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n'],}
 
 # Themes
 THEME = '../pelican-themes/pelican-bootstrap3'
