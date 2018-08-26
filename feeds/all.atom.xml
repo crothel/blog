@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-25T19:30:00+09:00</updated><entry><title>このブログについて</title><link href="https://crothel.github.io/blog/about.html" rel="alternate"></link><published>2018-08-25T19:30:00+09:00</published><updated>2018-08-25T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/about.html</id><summary type="html">&lt;p&gt;このブログについての説明。&lt;/p&gt;</summary><content type="html">&lt;h1&gt;このブログについて&lt;/h1&gt;
-&lt;h2&gt;１．目的&lt;/h2&gt;
-&lt;h3&gt;セルフプロデュース&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-25T19:30:00+09:00</updated><entry><title>このブログについて</title><link href="https://crothel.github.io/blog/about.html" rel="alternate"></link><published>2018-08-25T19:30:00+09:00</published><updated>2018-08-25T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/about.html</id><summary type="html">&lt;p&gt;このブログについての説明。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;１．目的&lt;/h3&gt;
+&lt;h4&gt;セルフプロデュース&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Data Driven Decision Consultant  &lt;/li&gt;
 &lt;li&gt;Data Driven Policy Making  &lt;/li&gt;
@@ -9,9 +8,9 @@
 &lt;p&gt;&amp;nbsp;専門である法律学や、政策立案補佐の経験に加えて、今後全人類にとって必須知識となるであろう機械学習やDL、強化学習を伴うデータ分析の技術を修得し、Data Driven Decision Consultantとなることを目指す。そして、Data Driven Policy Makingの実現に寄与する。&lt;br&gt;
 &amp;nbsp; 大層なことを書いてみたが、まだまだ半人前。このブログはしばらく技術習得のための学習記録が中心になるかと思う。&lt;br&gt;
 &amp;nbsp; いずれ法律や政策の背後にあるデータの分析や、立法過程の透明化にも取り組んでいきたいが、イデオロギーや政治について述べることはしない。   &lt;/p&gt;
-&lt;h3&gt;小遣い稼ぎ&lt;/h3&gt;
+&lt;h4&gt;小遣い稼ぎ&lt;/h4&gt;
 &lt;p&gt;&amp;nbsp; 広告くらいは載せてもバチは当たるまい。新しい本を買えれば満足である。  &lt;/p&gt;
-&lt;h2&gt;２．内容&lt;/h2&gt;
+&lt;h3&gt;２．内容&lt;/h3&gt;
 &lt;p&gt;&amp;nbsp; 想定するカテゴリは以下のとおり  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;データ分析・AI・プログラミング - TECH -  &lt;/li&gt;
@@ -28,9 +27,8 @@
 &lt;li&gt;Python  &lt;/li&gt;
 &lt;li&gt;各種Pythonライブラリ  &lt;/li&gt;
 &lt;li&gt;Kaggle  &lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>最初のPelicanブログ</title><link href="https://crothel.github.io/blog/20180825.html" rel="alternate"></link><published>2018-08-25T01:00:00+09:00</published><updated>2018-08-25T01:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/20180825.html</id><summary type="html">&lt;p&gt;テスト投稿&lt;/p&gt;</summary><content type="html">&lt;h1&gt;はじめてのタイトル&lt;/h1&gt;
+&lt;/ul&gt;</content></entry><entry><title>最初のPelicanブログ</title><link href="https://crothel.github.io/blog/20180825.html" rel="alternate"></link><published>2018-08-25T01:00:00+09:00</published><updated>2018-08-25T01:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/20180825.html</id><summary type="html">&lt;p&gt;テスト投稿&lt;/p&gt;</summary><content type="html">&lt;h3&gt;投稿テスト&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;投稿テスト&lt;/li&gt;
 &lt;li&gt;github Pagesを使ってみる。&lt;/li&gt;
 &lt;li&gt;pelicanを使ってみる。&lt;/li&gt;
 &lt;li&gt;(タスク)テーマをいじる。&lt;/li&gt;

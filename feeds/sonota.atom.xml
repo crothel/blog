@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - 04.その他</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/04sonota.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-25T01:00:00+09:00</updated><entry><title>最初のPelicanブログ</title><link href="https://crothel.github.io/blog/20180825.html" rel="alternate"></link><published>2018-08-25T01:00:00+09:00</published><updated>2018-08-25T01:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/20180825.html</id><summary type="html">&lt;p&gt;テスト投稿&lt;/p&gt;</summary><content type="html">&lt;h1&gt;はじめてのタイトル&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - その他</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/sonota.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-25T01:00:00+09:00</updated><entry><title>最初のPelicanブログ</title><link href="https://crothel.github.io/blog/20180825.html" rel="alternate"></link><published>2018-08-25T01:00:00+09:00</published><updated>2018-08-25T01:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/20180825.html</id><summary type="html">&lt;p&gt;テスト投稿&lt;/p&gt;</summary><content type="html">&lt;h3&gt;投稿テスト&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;投稿テスト&lt;/li&gt;
 &lt;li&gt;github Pagesを使ってみる。&lt;/li&gt;
 &lt;li&gt;pelicanを使ってみる。&lt;/li&gt;
 &lt;li&gt;(タスク)テーマをいじる。&lt;/li&gt;
