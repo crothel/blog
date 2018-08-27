@@ -46,7 +46,7 @@ PYGMENTS_STYLE = 'autumn'
 BOOTSTRAP_THEME = 'flatly'
 
 ## サイドバー
-ABOUT_ME = "著者の解説。このブログは技術習得のための学習記録が中心になるかと思う。"
+ABOUT_ME = "趣味で始めたプログラミングを仕事に応用すべく、データ分析を学習中。このブログは技術習得のための学習記録が中心になるかと思う。"
 DISPLAY_ARCHIVE_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
