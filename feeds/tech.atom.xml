@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-26T19:30:00+09:00</updated><entry><title>GithubPages + Pelicanでブログ構築</title><link href="https://crothel.github.io/blog/20180826.html" rel="alternate"></link><published>2018-08-26T19:30:00+09:00</published><updated>2018-08-26T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-26:/blog/20180826.html</id><summary type="html">&lt;p&gt;GithubPages + Pelicanによるブログの構築について。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - TECH</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/tech.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-26T19:30:00+09:00</updated><entry><title>GithubPages + Pelicanでブログ構築</title><link href="https://crothel.github.io/blog/20180826.html" rel="alternate"></link><published>2018-08-26T19:30:00+09:00</published><updated>2018-08-26T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-26:/blog/20180826.html</id><summary type="html">&lt;p&gt;GithubPages + Pelicanによるブログの構築について。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
 &lt;p&gt;学習の効率を上げるためにアウトプットの割合を増やす必要があると思い立ち、ブログに学習記録を書いたり、取り組みを整理したりすることにした。&lt;/p&gt;
 &lt;p&gt;WordPressなどのCMSで簡単にはじめても良かったのだが、ブログという点でも新しい取り組みをしようということで、Markdownで記事を書き、Pythonで静的ファイルを生成し、Githubで管理することにした。&lt;/p&gt;
 &lt;h3&gt;2.候補&lt;/h3&gt;
@@ -124,56 +124,4 @@ git push https://github.com/crothel/blog.git master:master
 
 &lt;h3&gt;6.おわりに&lt;/h3&gt;
 &lt;p&gt;デザインを１から作るのは大変かもしれないが、themeを編集するのであれば、少しのHTMLの知識があれば、jinja2もなんとなく読める。&lt;/p&gt;
-&lt;p&gt;ひとまず満足のいくものができたので、コンテンツの作成に集中できるだろう。しばらくしたら広告やjupyter notebookなども追加してみたい。&lt;/p&gt;</content><category term="python"></category><category term="github pages"></category><category term="pelican"></category></entry><entry><title>このブログについて</title><link href="https://crothel.github.io/blog/about.html" rel="alternate"></link><published>2018-08-25T19:30:00+09:00</published><updated>2018-08-25T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/about.html</id><summary type="html">&lt;p&gt;このブログについての説明。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;１．目的&lt;/h3&gt;
-&lt;h4&gt;セルフプロデュース&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Data Driven Decision Consultant  &lt;/li&gt;
-&lt;li&gt;Data Driven Policy Making  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp;専門である法律学や、政策立案補佐の経験に加えて、今後全人類にとって必須知識となるであろう機械学習やDL、強化学習を伴うデータ分析の技術を修得し、Data Driven Decision Consultantとなることを目指す。そして、Data Driven Policy Makingの実現に寄与する。&lt;br&gt;
-&amp;nbsp; 大層なことを書いてみたが、まだまだ半人前。このブログはしばらく技術習得のための学習記録が中心になるかと思う。&lt;br&gt;
-&amp;nbsp; いずれ法律や政策の背後にあるデータの分析や、立法過程の透明化にも取り組んでいきたいが、イデオロギーや政治について述べることはしない。   &lt;/p&gt;
-&lt;h4&gt;小遣い稼ぎ&lt;/h4&gt;
-&lt;p&gt;&amp;nbsp; 広告くらいは載せてもバチは当たるまい。新しい本を買えれば満足である。  &lt;/p&gt;
-&lt;h3&gt;２．内容&lt;/h3&gt;
-&lt;p&gt;&amp;nbsp; 想定するカテゴリは以下のとおり  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;データ分析・AI・プログラミング - TECH -  &lt;/li&gt;
-&lt;li&gt;法律・政策 - CODE -  &lt;/li&gt;
-&lt;li&gt;仕事術・組織論 - LEAN -  &lt;/li&gt;
-&lt;li&gt;その他  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;nbsp; タグによる整理は以下を予定  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;書評  &lt;/li&gt;
-&lt;li&gt;国会  &lt;/li&gt;
-&lt;li&gt;可視化  &lt;/li&gt;
-&lt;li&gt;政策名  &lt;/li&gt;
-&lt;li&gt;Python  &lt;/li&gt;
-&lt;li&gt;各種Pythonライブラリ  &lt;/li&gt;
-&lt;li&gt;Kaggle  &lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>最初のPelicanブログ</title><link href="https://crothel.github.io/blog/20180825.html" rel="alternate"></link><published>2018-08-25T01:00:00+09:00</published><updated>2018-08-25T01:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-25:/blog/20180825.html</id><summary type="html">&lt;p&gt;テスト投稿&lt;/p&gt;</summary><content type="html">&lt;h3&gt;投稿テスト&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;github Pagesを使ってみる。&lt;/li&gt;
-&lt;li&gt;pelicanを使ってみる。&lt;/li&gt;
-&lt;li&gt;(タスク)テーマをいじる。&lt;/li&gt;
-&lt;li&gt;addの調整&lt;/li&gt;
-&lt;li&gt;カテゴリーのじゅんばん&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The triple-colon syntax will *not* show line numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  　
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;The path-less shebang syntax *will* show line numbers.&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;バッククォート3つでも&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;test”)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="pelican"></category><category term="python"></category></entry></feed>
+&lt;p&gt;ひとまず満足のいくものができたので、コンテンツの作成に集中できるだろう。しばらくしたら広告やjupyter notebookなども追加してみたい。&lt;/p&gt;</content><category term="python"></category><category term="github pages"></category><category term="pelican"></category></entry></feed>

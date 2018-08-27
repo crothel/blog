@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>pelican - D3C blog</title>
+    <title>GithubPages + Pelicanでブログ構築 - D3C blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -173,16 +173,23 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
+<link rel="canonical" href="https://crothel.github.io/blog/20180826.html">
 
-    <meta name="author" content="Mt Taka" />
-    <meta name="keywords" content="pelican" />
+        <meta name="author" content="Mt Taka" />
+        <meta name="keywords" content="python,github pages,pelican" />
+        <meta name="description" content="GithubPages + Pelicanによるブログの構築について。" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="D3C blog" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="D3C blog"/>
-        <meta property="og:url" content="https://crothel.github.io/blog"/>
-        <meta property="og:description" content="D3C blog"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="GithubPages + Pelicanでブログ構築"/>
+        <meta property="og:url" content="https://crothel.github.io/blog/20180826.html"/>
+        <meta property="og:description" content="GithubPages + Pelicanによるブログの構築について。"/>
+        <meta property="article:published_time" content="2018-08-26" />
+            <meta property="article:section" content="TECH" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="github pages" />
+            <meta property="article:tag" content="pelican" />
+            <meta property="article:author" content="Mt Taka" />
 
 
 
@@ -198,6 +205,8 @@ init_mathjax();
 
 
 
+        <link href="https://crothel.github.io/blog/feeds/tech.atom.xml" type="application/atom+xml" rel="alternate"
+              title="D3C blog TECH ATOM Feed"/>
 
 </head>
 <body>
@@ -219,7 +228,7 @@ D3C blog            </a>
                         <li >
                             <a href="https://crothel.github.io/blog/category/about.html">About</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="https://crothel.github.io/blog/category/tech.html">Tech</a>
                         </li>
             </ul>
@@ -237,25 +246,191 @@ D3C blog            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <ol class="breadcrumb">
-        <li><a href="https://crothel.github.io/blog" title="D3C blog"><i class="fa fa-home fa-lg"></i></a></li>
-        <li><a href="https://crothel.github.io/blog/" title="Tags">Tags</a></li>
-        <li class="active">pelican</li>
-    </ol>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180826.html">GithubPages + Pelicanでブログ構築</a></h2>
-                <div class="summary"><p>GithubPages + Pelicanによるブログの構築について。</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180826.html">more ...</a>
+            <ol class="breadcrumb">
+                <li><a href="https://crothel.github.io/blog" title="D3C blog"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://crothel.github.io/blog/category/tech.html" title="TECH">TECH</a></li>
+                <li class="active">GithubPages + Pelicanでブログ構築</li>
+            </ol>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8116442bd6e8ad"></script>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://crothel.github.io/blog/20180826.html"
+                       rel="bookmark"
+                       title="Permalink to GithubPages + Pelicanでブログ構築">
+                        GithubPages + Pelicanでブログ構築
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-08-26T19:30:00+09:00"> 2018/08/26(日) </time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://crothel.github.io/blog/tag/python.html">python</a>
+        /
+	<a href="https://crothel.github.io/blog/tag/github-pages.html">github pages</a>
+        /
+	<a href="https://crothel.github.io/blog/tag/pelican.html">pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180825.html">最初のPelicanブログ</a></h2>
-                <div class="summary"><p>テスト投稿</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180825.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+                <h3>1.はじめに</h3>
+<p>学習の効率を上げるためにアウトプットの割合を増やす必要があると思い立ち、ブログに学習記録を書いたり、取り組みを整理したりすることにした。</p>
+<p>WordPressなどのCMSで簡単にはじめても良かったのだが、ブログという点でも新しい取り組みをしようということで、Markdownで記事を書き、Pythonで静的ファイルを生成し、Githubで管理することにした。</p>
+<h3>2.候補</h3>
+<ul>
+<li><a href="http://h-miyako.hatenablog.com/entry/2016/02/15/154712">Python製の静的サイトジェネレータを色々試してみました - Blank File</a></li>
+<li><a href="https://slideship.com/users/@driller/presentations/2017/09/N6Jbt8C28qNE4yYP8hDaPh/">静的サイトジェネレータのすゝめ</a></li>
+</ul>
+<p>上記サイトで紹介されている静的サイトジェネレータから、結局Pelicanを選択した。</p>
+<p>利用者が多くテーマが豊富という点が決め手。Jinja2やCSSをいじってデザインを作り込む気はなく、ひとまずコンテンツの作成に集中したかった。</p>
+<h3>3.構築</h3>
+<ul>
+<li><a href="https://www.compnet.jp/posts/2016-10-04T1648_switch-to-pelican.html">Blog システムを Pelican に移行する</a></li>
+<li><a href="https://qiita.com/yusukew62/items/7b01d2370cdbe170b28d">Python製静的HTMLジェネレータのPelicanでGitHub Pagesを公開する方法</a></li>
+</ul>
+<h4>3-1.Github Pagesの準備</h4>
+<p>Github Pagesにはユーザーページとプロジェクトページの二種類がある。ユーザーページはユーザーごとに1つしか作れないが、プロジェクトページはレポジトリごとに作成することができる。</p>
+<p>特に機能の差はないようだが、静的ファイルを管理するブランチが異なる。ユーザーページの場合はmasterブランチで管理するが、プロジェクトページの場合はgh-pagesと名付けたブランチで管理するのがデフォルトのようだ。</p>
+<p>後述のghp-importを使うとgh-pagesというブランチに静的ファイルをまとめることになる。リモートとブランチ名を変えるのはミスの元になりそうで好ましくないので、プロジェクトページを作成することにした。</p>
+<p>レポジトリを新規作成し、gh-pagesというブランチも作成。ローカルの作業フォルダでgit cloneを行った。基本的にはmasterブランチで作業し、そのままソースコードも管理する。</p>
+<h4>3-2.Pelicanの準備とテーマ設定</h4>
+<p>上記サイトの解説を参照。</p>
+<p>テーマはpelican-boostrap3を採用した。Boostwatchを利用でき、カラーリングに幅があることが決め手となった。</p>
+<ul>
+<li><a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a></li>
+<li><a href="https://bootswatch.com/">Boostwatch</a></li>
+</ul>
+<h5>テーマの編集</h5>
+<p>デザインをいじりたい場合、編集対象は以下</p>
+<ul>
+<li><code>pelicanconf.py</code></li>
+<li><code>publishconf.py</code></li>
+<li>themeの各種htmlファイル</li>
+<li>themeの各種CSSファイル</li>
+</ul>
+<p>pelicanの機能として編集すべきものと、themeのデザインによって編集すべきものがあり、pelicanのドキュメントやthemeの中身を覗くことになる。</p>
+<p>汎用性がありそうなものをメモしておく。</p>
+<h5>・dateformat</h5>
+<p>デフォルトの日付は「土 25 8月 2018」というようにイギリス式で表示されるようだ。</p>
+<p>このブログではthemeのHTMLでフォーマットを直接編集してしまったが、pelicanconf.pyに次のような１行を追加すれば済んだかもしれない（未実験）。</p>
+<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = &#39;%Y/%m/%d(%a)&#39;
+</pre></div>
+
+
+<h5>・addthis</h5>
+<p>pelican-bootstrap3では、ソーシャルボタンを各記事に追加できるが、addthisという外部サービスの利用が必要。</p>
+<p>themeのデフォルトでは、Twitterでのシェア、Facebookのいいね、Googleの+1ボタンのみ。ボタンのサイズがどうもイマイチ。</p>
+<p>addthisは便利そうだったので登録。addthisが生成したコードをそのままHTMLに貼り付けることにした。</p>
+<h5>・googleanalytics</h5>
+<p>Google AnalyticsでトラッキングIDを新規作成。</p>
+<p>publishconf.pyに次の１行を追加</p>
+<div class="highlight"><pre><span></span>GOOGLE_ANALYTICS = &quot;作成したトラッキングID&quot;
+</pre></div>
+
+
+<p>リアルタイムの概要から、自分がアクセスすることで動作確認ができる。</p>
+<h4>3-3.Markdown Extention</h4>
+<p>MarkdownのExtentionを追加する場合、pelicanconf.pyの中で、例えば次のように記載する。</p>
+<div class="highlight"><pre><span></span>MARKDOWN = {
+    &#39;extension_configs&#39; : {
+        &#39;markdown.extensions.codehilite&#39; : {&#39;css_class&#39;: &#39;highlight&#39;},
+        &#39;markdown.extensions.tables&#39; : {},
+        &#39;markdown.extensions.fenced_code&#39; : {},
+        &#39;linkify&#39;: {},
+        &#39;del_ins&#39;: {},
+        &#39;nl2br&#39;: {}
+    }
+}
+</pre></div>
+
+
+<p>古いweb記事だと以下のような記載が見受けられるが、現在は推奨されていない方法のようだ。WARNINGで注意される。</p>
+<div class="highlight"><pre><span></span>MD_EXTENSIONS = [&#39;codehilite(css_class=highlight)&#39;, &#39;extra&#39;]
+</pre></div>
+
+
+<p></p>
+<ul>
+<li><a href="https://www.muquu.net/2017/11/06/markdown-extensions/">Pelican の Markdown extension について</a></li>
+</ul>
+<h3>4.記事の書き方（Markdown）</h3>
+<p>この記事のメタは以下のとおり。</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">GithubPages</span> <span class="o">+</span> <span class="n">Pelicanでブログ構築</span>  
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">26</span> <span class="mi">19</span><span class="o">:</span><span class="mi">30</span>  
+<span class="n">Tags</span><span class="o">:</span> <span class="n">python</span><span class="o">,</span> <span class="n">github</span> <span class="n">pages</span><span class="o">,</span> <span class="n">pelican</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="mi">20180826</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">GithubPages</span> <span class="o">+</span> <span class="n">Pelicanによるブログの構築について</span><span class="err">。</span>  
+</pre></div>
+
+
+<p>mdファイルの場合、最初の行で必ずTitleを設定しなければならないようだ。titleが見つからないと怒られる。</p>
+<p>上記に続いて、記事本文を記入していく。</p>
+<h3>5.投稿・更新</h3>
+<p>HTMLファイルを作成し、localhostの8000番ポートで作成したWebページを確認。</p>
+<div class="highlight"><pre><span></span>make html
+make serve 
+#make serve PORT=8000というようにポートを指定することも可能
+</pre></div>
+
+
+<p><br>
+公開用ファイルを作成。</p>
+<div class="highlight"><pre><span></span>make publish
+</pre></div>
+
+
+<p>outputフォルダの中身をgh-pagesブランチにまとめる。</p>
+<div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">output</span>
+</pre></div>
+
+
+<p>git pushでリモートのgh-pagesを更新する。</p>
+<div class="highlight"><pre><span></span>#このブログの場合
+git push https://github.com/crothel/blog.git gh-pages:gh-pages  
+</pre></div>
+
+
+<p>このブログではmdファイルやソースコードをmasterブランチで管理しているので、masterも更新している。</p>
+<div class="highlight"><pre><span></span>#このブログの場合
+git push https://github.com/crothel/blog.git master:master  
+</pre></div>
+
+
+<h3>6.おわりに</h3>
+<p>デザインを１から作るのは大変かもしれないが、themeを編集するのであれば、少しのHTMLの知識があれば、jinja2もなんとなく読める。</p>
+<p>ひとまず満足のいくものができたので、コンテンツの作成に集中できるだろう。しばらくしたら広告やjupyter notebookなども追加してみたい。</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox"></div>
+    <!-- AddThis Button BEGIN -->
+    <!--
+    <div class="addthis_toolbox addthis_default_style">
+            <a class="addthis_button_hatena" ></a>
+            <a class="addthis_button_lineme"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+    </div>
+    -->
+    <!-- AddThis Button END -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -274,6 +449,7 @@ D3C blog            </a>
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
   <ul class="list-group" id="recentposts">
     <li class="list-group-item"><a href="https://crothel.github.io/blog/20180826.html">GithubPages + Pelicanでブログ構築</a></li>
+    <li class="list-group-item"><a href="https://crothel.github.io/blog/about.html">このブログについて</a></li>
     <li class="list-group-item"><a href="https://crothel.github.io/blog/20180825.html">最初のPelicanブログ</a></li>
   </ul>
 </li>
@@ -370,5 +546,7 @@ jQuery(document).ready(function($) {
 });
 });
 </script>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8116442bd6e8ad"></script>
 </body>
 </html>
