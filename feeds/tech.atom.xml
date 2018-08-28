@@ -1,62 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - TECH</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/tech.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-26T19:30:00+09:00</updated><entry><title>GithubPages + Pelicanでブログ構築</title><link href="https://crothel.github.io/blog/20180826.html" rel="alternate"></link><published>2018-08-26T19:30:00+09:00</published><updated>2018-08-26T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-26:/blog/20180826.html</id><summary type="html">&lt;p&gt;GithubPages + Pelicanによるブログの構築について。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
-&lt;p&gt;学習の効率を上げるためにアウトプットの割合を増やす必要があると思い立ち、ブログに学習記録を書いたり、取り組みを整理したりすることにした。&lt;/p&gt;
-&lt;p&gt;WordPressなどのCMSで簡単にはじめても良かったのだが、ブログという点でも新しい取り組みをしようということで、Markdownで記事を書き、Pythonで静的ファイルを生成し、Githubで管理することにした。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - TECH</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/tech.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-28T14:00:00+09:00</updated><entry><title>Pythonとデータ分析の学習コンテンツまとめ</title><link href="https://crothel.github.io/blog/20180828.html" rel="alternate"></link><published>2018-08-28T14:00:00+09:00</published><updated>2018-08-28T14:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-28:/blog/20180828.html</id><summary type="html">&lt;p&gt;無料でダウンロード又は利用できる、Pythonやデータ分析の学習コンテンツをまとめる。&lt;/p&gt;</summary><content type="html">&lt;p&gt;無料でダウンロード又は利用できる、Pythonやデータ分析の学習コンテンツをまとめる。書評や感想は気が向いたら別途。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;1.Python、ライブラリの学習&lt;/h3&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・&lt;a href="https://www.python.ambitious-engineer.com/"&gt;Python学習講座&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Pythonの基本を学べる。プログラミングやPythonが初めてという人はここから。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・&lt;a href="https://automatetheboringstuff.com/"&gt;Automate the Boring Stuff with Python（英語）&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;以下の原書&lt;br&gt;
+『退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング』(Al Sweigart (著), 相川 愛三 (翻訳)、オライリージャパン) &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・&lt;a href="https://jakevdp.github.io/PythonDataScienceHandbook/"&gt;Python Data Science Handbook（英語）&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;以下の原書&lt;br&gt;
+「Pythonデータサイエンスハンドブック ―Jupyter、NumPy、pandas、Matplotlib、scikit-learnを使ったデータ分析、機械学習」(Jake VanderPlas (著)、オライリージャパン)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;2.演習系&lt;/h3&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・各種プログラミングコンテスト&lt;/h4&gt;
+&lt;p&gt;まずは簡単なプログラミングをしてコーディングやPythonに慣れたいという場合、プログラミングコンテストへの参加がオススメ。&lt;br&gt;
+初心者向けのコンテストや、アルゴリズムを学ぶコースがある。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://atcoder.jp/"&gt;AtCoder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://judge.u-aizu.ac.jp/onlinejudge/"&gt;AIZU ONLINE JUDGE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・&lt;a href="https://weblab.t.u-tokyo.ac.jp/gci_contents/"&gt;GCIデータサイエンティスト育成講座&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Jupyter Notebookを利用したテキスト＋演習で、その場でコードを実行しながら学習を進めることができる。いい時代になったものだ……&lt;/p&gt;
+&lt;p&gt;コンテンツの内容は以下のとおり（カリキュラムから引用）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapter1 : データサイエンティスト講座概要とPythonの基礎&lt;ul&gt;
+&lt;li&gt;はじめに&lt;/li&gt;
+&lt;li&gt;Pythonの基礎&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter2 : Numpy、Scipy、Pandas、Matplotlibの基礎&lt;ul&gt;
+&lt;li&gt;Numpy、Scipy、Pandas、Matplotlibの基礎&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter3 : 記述統計学と単回帰分析&lt;ul&gt;
+&lt;li&gt;記述統計学と単回帰分析&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter4 : 確率と統計の基礎&lt;ul&gt;
+&lt;li&gt;確率・統計の基礎&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter5 : Pythonによる科学計算の基礎（NumpyとScipy）&lt;ul&gt;
+&lt;li&gt;概要&lt;/li&gt;
+&lt;li&gt;Numpy&lt;/li&gt;
+&lt;li&gt;Scipy&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter6 : Pandasを使ったデータ加工処理&lt;ul&gt;
+&lt;li&gt;Pandas&lt;/li&gt;
+&lt;li&gt;欠損データと異常値の取り扱いの基礎&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter7 : Matplotlibを使ったデータ可視化&lt;ul&gt;
+&lt;li&gt;データの可視化&lt;/li&gt;
+&lt;li&gt;分析結果の見せ方を考えよう&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter8 : データベースとSQLの基礎&lt;ul&gt;
+&lt;li&gt;この章の概要&lt;/li&gt;
+&lt;li&gt;SQLの基礎&lt;/li&gt;
+&lt;li&gt;ビュー&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter9 : データベースの応用（高度なSQL処理と高速化）&lt;ul&gt;
+&lt;li&gt;この章の概要&lt;/li&gt;
+&lt;li&gt;高度なSQLの基礎&lt;/li&gt;
+&lt;li&gt;ストアドプロシージャとストアドファンクション&lt;/li&gt;
+&lt;li&gt;インデクシングとSQLの高速化&lt;/li&gt;
+&lt;li&gt;その他&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter10 : ドキュメント型DB（MongoDB）&lt;ul&gt;
+&lt;li&gt;NoSQLとRDBMS&lt;/li&gt;
+&lt;li&gt;MongoDBの基礎知識&lt;/li&gt;
+&lt;li&gt;MongoDBの基本操作&lt;/li&gt;
+&lt;li&gt;MongoDBのパフォーマンス向上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter11 : 機械学習の基礎（教師あり学習）&lt;ul&gt;
+&lt;li&gt;機械学習の全体像&lt;/li&gt;
+&lt;li&gt;重回帰分析&lt;/li&gt;
+&lt;li&gt;ロジスティック回帰分析&lt;/li&gt;
+&lt;li&gt;正則化、ラッソ回帰、リッジ回帰&lt;/li&gt;
+&lt;li&gt;決定木&lt;/li&gt;
+&lt;li&gt;k-NN&lt;/li&gt;
+&lt;li&gt;サポートベクターマシン&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter12 : 機械学習の基礎（教師なし学習）&lt;ul&gt;
+&lt;li&gt;クラスタリング(クラスター分析）&lt;/li&gt;
+&lt;li&gt;次元圧縮（主成分分析）&lt;/li&gt;
+&lt;li&gt;バスケット分析とアソシエーションルール&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter13 : モデルの検証方法とチューニング方法&lt;ul&gt;
+&lt;li&gt;この章で学ぶこと&lt;/li&gt;
+&lt;li&gt;過学習の対処法とモデルチューニング方法&lt;/li&gt;
+&lt;li&gt;混同行列とROC曲線&lt;/li&gt;
+&lt;li&gt;シミュレーションと計算統計学の基礎&lt;/li&gt;
+&lt;li&gt;アンサンブル学習&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter14 : データサイエンスティスト中級者への道&lt;ul&gt;
+&lt;li&gt;この章の概要&lt;/li&gt;
+&lt;li&gt;深層学習を学ぶための準備&lt;/li&gt;
+&lt;li&gt;Pythonの高速化&lt;/li&gt;
+&lt;li&gt;Spark入門&lt;/li&gt;
+&lt;li&gt;その他の数学的手法とエンジニアリングツール&lt;/li&gt;
+&lt;li&gt;総合問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter15 : 総合演習問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;・&lt;a href="https://www.dataquest.io/"&gt;DataQuest（英語）&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;基本的にや有料コンテンツだが、無料でもある程度は利用できるようなので紹介。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;3.実践&lt;/h3&gt;
+&lt;h4&gt;&lt;a href="https://www.kaggle.com/"&gt;Kaggle(英語)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;途方に暮れるので、以下を参考に全体の流れを掴むと良さそう。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.mirandora.com/?p=1804"&gt;Kaggleのtitanic問題で上位10%に入るまでのデータ解析と所感&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLkBjLQIGEjJnbde-czDnP9kvF9-Um5q6Q"&gt;Kaggle入門 Porto Seguroコンペ（Youtube)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</content><category term="python"></category><category term="データ分析"></category><category term="学習"></category></entry><entry><title>GithubPages + Pelicanでブログ構築</title><link href="https://crothel.github.io/blog/20180826.html" rel="alternate"></link><published>2018-08-26T19:30:00+09:00</published><updated>2018-08-26T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-26:/blog/20180826.html</id><summary type="html">&lt;p&gt;GithubPages + Pelicanによるブログの構築について。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
+&lt;p&gt;学習の効率を上げるためにアウトプットの割合を増やす必要があると思い立ち、ブログに学習記録を書いたり、取り組みを整理したりすることにした。 &lt;/p&gt;
+&lt;p&gt;WordPressなどのCMSで簡単にはじめても良かったのだが、ブログという点でも新しい取り組みをしようということで、Markdownで記事を書き、Pythonで静的ファイルを生成し、Githubで管理することにした。 &lt;/p&gt;
 &lt;h3&gt;2.候補&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://h-miyako.hatenablog.com/entry/2016/02/15/154712"&gt;Python製の静的サイトジェネレータを色々試してみました - Blank File&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://slideship.com/users/@driller/presentations/2017/09/N6Jbt8C28qNE4yYP8hDaPh/"&gt;静的サイトジェネレータのすゝめ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;上記サイトで紹介されている静的サイトジェネレータから、結局Pelicanを選択した。&lt;/p&gt;
-&lt;p&gt;利用者が多くテーマが豊富という点が決め手。Jinja2やCSSをいじってデザインを作り込む気はなく、ひとまずコンテンツの作成に集中したかった。&lt;/p&gt;
+&lt;p&gt;上記サイトで紹介されている静的サイトジェネレータから、結局Pelicanを選択した。 &lt;/p&gt;
+&lt;p&gt;利用者が多くテーマが豊富という点が決め手。Jinja2やCSSをいじってデザインを作り込む気はなく、ひとまずコンテンツの作成に集中したかった。 &lt;/p&gt;
 &lt;h3&gt;3.構築&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.compnet.jp/posts/2016-10-04T1648_switch-to-pelican.html"&gt;Blog システムを Pelican に移行する&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://qiita.com/yusukew62/items/7b01d2370cdbe170b28d"&gt;Python製静的HTMLジェネレータのPelicanでGitHub Pagesを公開する方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;3-1.Github Pagesの準備&lt;/h4&gt;
-&lt;p&gt;Github Pagesにはユーザーページとプロジェクトページの二種類がある。ユーザーページはユーザーごとに1つしか作れないが、プロジェクトページはレポジトリごとに作成することができる。&lt;/p&gt;
-&lt;p&gt;特に機能の差はないようだが、静的ファイルを管理するブランチが異なる。ユーザーページの場合はmasterブランチで管理するが、プロジェクトページの場合はgh-pagesと名付けたブランチで管理するのがデフォルトのようだ。&lt;/p&gt;
-&lt;p&gt;後述のghp-importを使うとgh-pagesというブランチに静的ファイルをまとめることになる。リモートとブランチ名を変えるのはミスの元になりそうで好ましくないので、プロジェクトページを作成することにした。&lt;/p&gt;
-&lt;p&gt;レポジトリを新規作成し、gh-pagesというブランチも作成。ローカルの作業フォルダでgit cloneを行った。基本的にはmasterブランチで作業し、そのままソースコードも管理する。&lt;/p&gt;
+&lt;p&gt;Github Pagesにはユーザーページとプロジェクトページの二種類がある。ユーザーページはユーザーごとに1つしか作れないが、プロジェクトページはレポジトリごとに作成することができる。 &lt;/p&gt;
+&lt;p&gt;特に機能の差はないようだが、静的ファイルを管理するブランチが異なる。ユーザーページの場合はmasterブランチで管理するが、プロジェクトページの場合はgh-pagesと名付けたブランチで管理するのがデフォルトのようだ。 &lt;/p&gt;
+&lt;p&gt;後述のghp-importを使うとgh-pagesというブランチに静的ファイルをまとめることになる。リモートとブランチ名を変えるのはミスの元になりそうで好ましくないので、プロジェクトページを作成することにした。 &lt;/p&gt;
+&lt;p&gt;レポジトリを新規作成し、gh-pagesというブランチも作成。ローカルの作業フォルダでgit cloneを行った。基本的にはmasterブランチで作業し、そのままソースコードも管理する。 &lt;/p&gt;
 &lt;h4&gt;3-2.Pelicanの準備とテーマ設定&lt;/h4&gt;
-&lt;p&gt;上記サイトの解説を参照。&lt;/p&gt;
-&lt;p&gt;テーマはpelican-boostrap3を採用した。Boostwatchを利用でき、カラーリングに幅があることが決め手となった。&lt;/p&gt;
+&lt;p&gt;上記サイトの解説を参照。 &lt;/p&gt;
+&lt;p&gt;テーマはpelican-boostrap3を採用した。Boostwatchを利用でき、カラーリングに幅があることが決め手となった。 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bootswatch.com/"&gt;Boostwatch&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5&gt;テーマの編集&lt;/h5&gt;
-&lt;p&gt;デザインをいじりたい場合、編集対象は以下&lt;/p&gt;
+&lt;h4&gt;テーマの編集&lt;/h4&gt;
+&lt;p&gt;デザインをいじりたい場合、編集対象は以下 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;publishconf.py&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;themeの各種htmlファイル&lt;/li&gt;
 &lt;li&gt;themeの各種CSSファイル&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;pelicanの機能として編集すべきものと、themeのデザインによって編集すべきものがあり、pelicanのドキュメントやthemeの中身を覗くことになる。&lt;/p&gt;
-&lt;p&gt;汎用性がありそうなものをメモしておく。&lt;/p&gt;
+&lt;p&gt;pelicanの機能として編集すべきものと、themeのデザインによって編集すべきものがあり、pelicanのドキュメントやthemeの中身を覗くことになる。 &lt;/p&gt;
+&lt;p&gt;汎用性がありそうなものをメモしておく。 &lt;/p&gt;
 &lt;h5&gt;・dateformat&lt;/h5&gt;
-&lt;p&gt;デフォルトの日付は「土 25 8月 2018」というようにイギリス式で表示されるようだ。&lt;/p&gt;
-&lt;p&gt;このブログではthemeのHTMLでフォーマットを直接編集してしまったが、pelicanconf.pyに次のような１行を追加すれば済んだかもしれない（未実験）。&lt;/p&gt;
+&lt;p&gt;デフォルトの日付は「土 25 8月 2018」というようにイギリス式で表示されるようだ。 &lt;/p&gt;
+&lt;p&gt;このブログではthemeのHTMLでフォーマットを直接編集してしまったが、pelicanconf.pyに次のような１行を追加すれば済んだかもしれない（未実験）。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;DEFAULT_DATE_FORMAT = &amp;#39;%Y/%m/%d(%a)&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h5&gt;・addthis&lt;/h5&gt;
-&lt;p&gt;pelican-bootstrap3では、ソーシャルボタンを各記事に追加できるが、addthisという外部サービスの利用が必要。&lt;/p&gt;
-&lt;p&gt;themeのデフォルトでは、Twitterでのシェア、Facebookのいいね、Googleの+1ボタンのみ。ボタンのサイズがどうもイマイチ。&lt;/p&gt;
-&lt;p&gt;addthisは便利そうだったので登録。addthisが生成したコードをそのままHTMLに貼り付けることにした。&lt;/p&gt;
+&lt;p&gt;pelican-bootstrap3では、ソーシャルボタンを各記事に追加できるが、addthisという外部サービスの利用が必要。 &lt;/p&gt;
+&lt;p&gt;themeのデフォルトでは、Twitterでのシェア、Facebookのいいね、Googleの+1ボタンのみ。ボタンのサイズがどうもイマイチ。 &lt;/p&gt;
+&lt;p&gt;addthisは便利そうだったので登録。addthisが生成したコードをそのままHTMLに貼り付けることにした。 &lt;/p&gt;
 &lt;h5&gt;・googleanalytics&lt;/h5&gt;
-&lt;p&gt;Google AnalyticsでトラッキングIDを新規作成。&lt;/p&gt;
-&lt;p&gt;publishconf.pyに次の１行を追加&lt;/p&gt;
+&lt;p&gt;Google AnalyticsでトラッキングIDを新規作成。 &lt;/p&gt;
+&lt;p&gt;publishconf.pyに次の１行を追加 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;GOOGLE_ANALYTICS = &amp;quot;作成したトラッキングID&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;リアルタイムの概要から、自分がアクセスすることで動作確認ができる。&lt;/p&gt;
+&lt;p&gt;リアルタイムの概要から、自分がアクセスすることで動作確認ができる。 &lt;/p&gt;
 &lt;h4&gt;3-3.Markdown Extention&lt;/h4&gt;
-&lt;p&gt;MarkdownのExtentionを追加する場合、pelicanconf.pyの中で、例えば次のように記載する。&lt;/p&gt;
+&lt;p&gt;MarkdownのExtentionを追加する場合、pelicanconf.pyの中で、例えば次のように記載する。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MARKDOWN = {
     &amp;#39;extension_configs&amp;#39; : {
         &amp;#39;markdown.extensions.codehilite&amp;#39; : {&amp;#39;css_class&amp;#39;: &amp;#39;highlight&amp;#39;},
@@ -70,7 +215,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;古いweb記事だと以下のような記載が見受けられるが、現在は推奨されていない方法のようだ。WARNINGで注意される。&lt;/p&gt;
+&lt;p&gt;古いweb記事だと以下のような記載が見受けられるが、現在は推奨されていない方法のようだ。WARNINGで注意される。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MD_EXTENSIONS = [&amp;#39;codehilite(css_class=highlight)&amp;#39;, &amp;#39;extra&amp;#39;]
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -80,7 +225,7 @@
 &lt;li&gt;&lt;a href="https://www.muquu.net/2017/11/06/markdown-extensions/"&gt;Pelican の Markdown extension について&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;4.記事の書き方（Markdown）&lt;/h3&gt;
-&lt;p&gt;この記事のメタは以下のとおり。&lt;/p&gt;
+&lt;p&gt;この記事のメタは以下のとおり。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GithubPages&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;Pelicanでブログ構築&lt;/span&gt;  
 &lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;  
 &lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
@@ -89,10 +234,10 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;mdファイルの場合、最初の行で必ずTitleを設定しなければならないようだ。titleが見つからないと怒られる。&lt;/p&gt;
-&lt;p&gt;上記に続いて、記事本文を記入していく。&lt;/p&gt;
+&lt;p&gt;mdファイルの場合、最初の行で必ずTitleを設定しなければならないようだ。titleが見つからないと怒られる。 &lt;/p&gt;
+&lt;p&gt;上記に続いて、記事本文を記入していく。 &lt;/p&gt;
 &lt;h3&gt;5.投稿・更新&lt;/h3&gt;
-&lt;p&gt;HTMLファイルを作成し、localhostの8000番ポートで作成したWebページを確認。&lt;/p&gt;
+&lt;p&gt;HTMLファイルを作成し、localhostの8000番ポートで作成したWebページを確認。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make html
 make serve 
 #make serve PORT=8000というようにポートを指定することも可能
@@ -100,28 +245,28 @@ make serve
 
 
 &lt;p&gt;&lt;br&gt;
-公開用ファイルを作成。&lt;/p&gt;
+公開用ファイルを作成。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make publish
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;outputフォルダの中身をgh-pagesブランチにまとめる。&lt;/p&gt;
+&lt;p&gt;outputフォルダの中身をgh-pagesブランチにまとめる。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;output&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;git pushでリモートのgh-pagesを更新する。&lt;/p&gt;
+&lt;p&gt;git pushでリモートのgh-pagesを更新する。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#このブログの場合
 git push https://github.com/crothel/blog.git gh-pages:gh-pages  
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;このブログではmdファイルやソースコードをmasterブランチで管理しているので、masterも更新している。&lt;/p&gt;
+&lt;p&gt;このブログではmdファイルやソースコードをmasterブランチで管理しているので、masterも更新している。 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#このブログの場合
 git push https://github.com/crothel/blog.git master:master  
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;6.おわりに&lt;/h3&gt;
-&lt;p&gt;デザインを１から作るのは大変かもしれないが、themeを編集するのであれば、少しのHTMLの知識があれば、jinja2もなんとなく読める。&lt;/p&gt;
-&lt;p&gt;ひとまず満足のいくものができたので、コンテンツの作成に集中できるだろう。しばらくしたら広告やjupyter notebookなども追加してみたい。&lt;/p&gt;</content><category term="python"></category><category term="github pages"></category><category term="pelican"></category></entry></feed>
+&lt;p&gt;デザインを１から作るのは大変かもしれないが、themeを編集するのであれば、少しのHTMLの知識があれば、jinja2もなんとなく読める。 &lt;/p&gt;
+&lt;p&gt;ひとまず満足のいくものができたので、コンテンツの作成に集中できるだろう。しばらくしたら広告やjupyter notebookなども追加してみたい。 &lt;/p&gt;</content><category term="python"></category><category term="github pages"></category><category term="pelican"></category></entry></feed>
