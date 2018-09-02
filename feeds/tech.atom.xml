@@ -1,5 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - TECH</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/tech.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-08-30T19:30:00+09:00</updated><entry><title>学習用の開発環境（Google Colaboratory）</title><link href="https://crothel.github.io/blog/20180830.html" rel="alternate"></link><published>2018-08-30T19:30:00+09:00</published><updated>2018-08-30T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-30:/blog/20180830.html</id><summary type="html">&lt;p&gt;Pythonとデータ分析の学習を進めるにあたって、できるだけ簡単に開発環境を整えたい。Google Colaboratoryが最も手っ取り早いだろう。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog - TECH</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/tech.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-09-02T15:30:00+09:00</updated><entry><title>国家予算をサンバースト図で表現する（その１）</title><link href="https://crothel.github.io/blog/20180902.html" rel="alternate"></link><published>2018-09-02T15:30:00+09:00</published><updated>2018-09-02T15:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-02:/blog/20180902.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。データを整えるまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1.はじめに&lt;/h2&gt;
+&lt;p&gt;ニュースで概算要求の話題を聞く機会が増えてきた。&lt;br&gt;
+hogehoge省がfugafuga事業にN億円。億円という単位のせいで高めに聞こえるが、実のところ、それは高いのだろうか、低いのだろうか。いまいちピンとこない。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;事業の重要性を考えるという点では、全体の中での割合や前年度との比較をしてみるといいかもしれない。国家予算をわかりやすくビジュアライゼーションしようと思い立った。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;前々からやってみたいなと思っていた図にサンバースト図というものがある。今回は国家予算をサンバースト図で図示することを目指す。&lt;/p&gt;
+&lt;p&gt;最終的な目標は下記参考を組み合わせたものだ。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;参考&lt;br&gt;
+- &lt;a href="https://bl.ocks.org/kerryrodden/7090426"&gt;Sequences sunburst&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://beta.observablehq.com/@mbostock/d3-zoomable-sunburst"&gt;D3 Zoomable Sunburst&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;2.データの入手と整形&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;2-1.必要なデータ構造&lt;/h3&gt;
+&lt;p&gt;上記参考サイトのように、D3.jsを用いればイメージするサンバースト図を作れそうである。&lt;/p&gt;
+&lt;p&gt;必要なデータは以下のような階層構造を持ったデータ&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var data =[
+   {
+      &amp;quot;key&amp;quot;: &amp;quot;Complete&amp;quot;,
+      &amp;quot;values&amp;quot;: [
+         {
+            &amp;quot;key&amp;quot;: &amp;quot;MUST&amp;quot;,
+            &amp;quot;values&amp;quot;: 5
+         },
+         {
+            &amp;quot;key&amp;quot;: &amp;quot;SHOULD&amp;quot;,
+            &amp;quot;values&amp;quot;: 5
+         },
+         {
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以下のように、&lt;code&gt;d3.csv&lt;/code&gt;や&lt;code&gt;d3.json&lt;/code&gt;でデータを読み、&lt;code&gt;d3.nest()&lt;/code&gt;を用いれば階層構造のデータを作ることができるようだ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;d3.json(JSONDATA_FILE_PATH, function (d) {
+            var nested_data = d3.nest()
+                .key(function(d) { return d.status; })
+                .key(function(d) { return d.priority; })
+                .rollup(function(leaves) {
+                    return leaves.length; })
+                .entries(d);
+            };
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;そこで、まずは親要素、子要素、孫要素や数値を、CSVのカラムやJSONのキーとしてデータをまとめることを目指す。&lt;/p&gt;
+&lt;p&gt;なお、CSVでは数値を数値型として読み込めなかったので、最終的にはJSONとした。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;参考&lt;br&gt;
+- &lt;a href="https://wizardace.com/d3-hierarchy/"&gt;D3.js v4/v5 hierarchy データ構造と使い方&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://wizardace.com/d3-sunburst-base/"&gt;D3.js v4/v5 サンバースト図の作り方&lt;/a&gt;&lt;br&gt;
+- &lt;a href="http://bl.ocks.org/phoebebright/raw/3176159/"&gt;D3 Nest Tutorial and examples&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;2-2.財務省データの加工&lt;/h3&gt;
+&lt;p&gt;財務省のデータは&lt;a href="https://www.bb.mof.go.jp/hdocs/bxss010bh30.html"&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;平成30年度の一般会計から、歳出予定経費要求書(科目別内訳)をサンバースト図で表現することにする。&lt;/p&gt;
+&lt;p&gt;エクセルを開いてみると、シートは二つ。「一般会計 予定経費要求書（科目別内訳）」が今回使いたい表となる。&lt;/p&gt;
+&lt;p&gt;ローカルにダウンロードしてから、とりあえず&lt;code&gt;pandas&lt;/code&gt;で読み込んでみる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_excel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;エクセルへのパス&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sheet_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;一般会計 予定経費要求書（科目別内訳）&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;ダウンロード直後の表は以下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;所管   組織  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6  \
+0  皇室費  皇室費         NaN         NaN         NaN         NaN         NaN   
+1  NaN  NaN         1.0         NaN         NaN         NaN         NaN   
+2  NaN  NaN         NaN        95.0        11.0         2.0        12.0   
+3  NaN  NaN         2.0         NaN         NaN         NaN         NaN   
+4  NaN  NaN         NaN        95.0        11.0         2.0        12.0   
+
+   Unnamed: 7  Unnamed: 8 Unnamed: 9                         項目  \
+0         NaN         NaN        NaN                        NaN   
+1         NaN         NaN        内廷費                        NaN   
+2         9.0        99.0        NaN                      (内廷費)   
+3         NaN         NaN        宮廷費                        NaN   
+4         9.0         6.0        NaN                        諸謝金   
+
+   平成30年度要求額(千円)  前年度予算額(千円)  比較増△減額(千円)  
+0        9859615     6217637     3641978  
+1         324000      324000           0  
+2         324000      324000           0  
+3        9171445     5678917     3492528  
+4          38457       25756       12701
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;階層構造データのために必要なのは、予算のカテゴリー情報とその額だ。&lt;/p&gt;
+&lt;p&gt;コード番号や前年度予算額、比較増減額などは捨てて良い。ついでに、いずれJavascriptで扱うことを考えて、カラム名を適当に付け直しておく。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;file = file.iloc[:,[0,1,9,10,11]]
+file.columns = [&amp;quot;jurisdiction&amp;quot;, &amp;quot;organization&amp;quot;, &amp;quot;item&amp;quot;, &amp;quot;subject&amp;quot;, &amp;quot;amount&amp;quot;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;file.info()&lt;/code&gt;で中身を見ると、次のようになっている。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;class &amp;#39;pandas.core.frame.DataFrame&amp;#39;&amp;gt;
+RangeIndex: 7411 entries, 0 to 7410
+Data columns (total 5 columns):
+jurisdiction    17 non-null object
+organization    90 non-null object
+item            768 non-null object
+subject         6553 non-null object
+amount          7411 non-null int64
+dtypes: int64(1), object(4)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;jurisdictionは所管。省庁名や裁判所、国会といった文字列。&lt;br&gt;
+organizationは組織。例えば国会なら衆議院、参議院、国立国会図書館。&lt;br&gt;
+itemとsubjectが予算の区分。amountが予算額だ。&lt;/p&gt;
+&lt;p&gt;NaNが多いが、直前と同じカテゴリの場合は空白になっている。&lt;br&gt;
+amountの数は、90 + 768 + 6553 = 7441となっており、組織と大項目の合計値もそれぞれ記載されていることがうかがえる。&lt;br&gt;
+合計はJavascriptの方で行えば良い。jurisdictionからitemまでを補充したsubjectの列だけを抽出すれば良さそうだ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#3つのカラムについて前方埋め
+file[[&amp;quot;jurisdiction&amp;quot;, &amp;quot;organization&amp;quot;, &amp;quot;item&amp;quot;]] = file[[&amp;quot;jurisdiction&amp;quot;, &amp;quot;organization&amp;quot;, &amp;quot;item&amp;quot;]].fillna(method=&amp;quot;ffill&amp;quot;)
+
+#NaNが残る列(&amp;quot;subject&amp;quot;がNanの列)を削除する。
+file = file.dropna()
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;最終的にはこんなデータフレームになる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jurisdiction organization item subject   amount
+2          皇室費          皇室費  内廷費   (内廷費)   324000
+4          皇室費          皇室費  宮廷費     諸謝金    38457
+5          皇室費          皇室費  宮廷費     報償費   318877
+6          皇室費          皇室費  宮廷費      庁費  3938408
+7          皇室費          皇室費  宮廷費     招宴費    68492
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;このデータをJavascriptに読み込ませるため、csvかJsonで保存する（最終的にはJsonにした。）。&lt;/p&gt;
+&lt;p&gt;pandasがつけたindexは不要なので落としている。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#CSVの場合
+file.to_csv(&amp;#39;budget2018.csv&amp;#39;, index=False)
+
+#Jsonの場合
+file.to_json(&amp;#39;budget2018.json&amp;#39;, orient=&amp;#39;records&amp;#39;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;3.小括&lt;/h2&gt;
+&lt;p&gt;以上で、Javascriptで扱うためのデータが完成した。&lt;/p&gt;
+&lt;p&gt;後の工程でCSVのデータ型の問題を解決できず、最終的にはJsonを使用している。&lt;/p&gt;
+&lt;p&gt;これを用いて、JavasicriptとD3.jsでサンバースト図を描画していく。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;表が綺麗だったので、全く引っかかることはなかった。&lt;/p&gt;
+&lt;p&gt;前処理の練習が主目的だったのだが、後にJavascriptとD3.jsに苦戦したことを考えると、練習としてはよくない題材だったかもしれない。&lt;/p&gt;</content><category term="python"></category><category term="pandas"></category><category term="可視化"></category><category term="予算"></category></entry><entry><title>学習用の開発環境（Google Colaboratory）</title><link href="https://crothel.github.io/blog/20180830.html" rel="alternate"></link><published>2018-08-30T19:30:00+09:00</published><updated>2018-08-30T19:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-08-30:/blog/20180830.html</id><summary type="html">&lt;p&gt;Pythonとデータ分析の学習を進めるにあたって、できるだけ簡単に開発環境を整えたい。Google Colaboratoryが最も手っ取り早いだろう。&lt;/p&gt;</summary><content type="html">&lt;h3&gt;1.はじめに&lt;/h3&gt;
 &lt;p&gt;Pythonとデータ分析の学習を始めるにあたり、まず必要になるのは開発環境を整えることだ。&lt;/p&gt;
 &lt;p&gt;基本的な手順としては、Pythonや関連ライブラリのセットアップを行い、テキストエディタやIDEから気に入ったものを選ぶことになる。&lt;/p&gt;
 &lt;p&gt;PATHを通して、必要なライブラリを揃えて、バージョン管理して、といった一連の作業は面倒くさいし、忘れる。初心者にとっては敷居が高いと感じる原因の1つではないだろうか。私がそうだ。&lt;/p&gt;

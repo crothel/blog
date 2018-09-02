@@ -4,7 +4,7 @@
     <!-- BlogのSearch Console -->
     <meta name="google-site-verification" content="7TXNH_d_I6s6P2KCPPACDA954US1bRqL1EPYT_9ZARg" />
 
-    <title>python - D3C blog</title>
+    <title>国家予算をサンバースト図で表現する（その１） - D3C blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -176,16 +176,24 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
+<link rel="canonical" href="https://crothel.github.io/blog/20180902.html">
 
-    <meta name="author" content="Mt Taka" />
-    <meta name="keywords" content="python" />
+        <meta name="author" content="Mt Taka" />
+        <meta name="keywords" content="python,pandas,可視化,予算" />
+        <meta name="description" content="2018年度国家予算をサンバースト図で表現する。データを整えるまで。" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="D3C blog" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="D3C blog"/>
-        <meta property="og:url" content="https://crothel.github.io/blog"/>
-        <meta property="og:description" content="D3C blog"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="国家予算をサンバースト図で表現する（その１）"/>
+        <meta property="og:url" content="https://crothel.github.io/blog/20180902.html"/>
+        <meta property="og:description" content="2018年度国家予算をサンバースト図で表現する。データを整えるまで。"/>
+        <meta property="article:published_time" content="2018-09-02" />
+            <meta property="article:section" content="TECH" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="pandas" />
+            <meta property="article:tag" content="可視化" />
+            <meta property="article:tag" content="予算" />
+            <meta property="article:author" content="Mt Taka" />
 
 
 
@@ -201,6 +209,8 @@ init_mathjax();
 
 
 
+        <link href="https://crothel.github.io/blog/feeds/tech.atom.xml" type="application/atom+xml" rel="alternate"
+              title="D3C blog TECH ATOM Feed"/>
 
 </head>
 <body>
@@ -222,7 +232,7 @@ D3C blog            </a>
                         <li >
                             <a href="https://crothel.github.io/blog/category/about.html">About</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="https://crothel.github.io/blog/category/tech.html">Tech</a>
                         </li>
             </ul>
@@ -240,39 +250,221 @@ D3C blog            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <ol class="breadcrumb">
-        <li><a href="https://crothel.github.io/blog" title="D3C blog"><i class="fa fa-home fa-lg"></i></a></li>
-        <li><a href="https://crothel.github.io/blog/" title="Tags">Tags</a></li>
-        <li class="active">python</li>
-    </ol>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180902.html">国家予算をサンバースト図で表現する（その１）</a></h2>
-                <div class="summary"><p>2018年度国家予算をサンバースト図で表現する。データを整えるまで。</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180902.html">more ...</a>
+            <ol class="breadcrumb">
+                <li><a href="https://crothel.github.io/blog" title="D3C blog"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://crothel.github.io/blog/category/tech.html" title="TECH">TECH</a></li>
+                <li class="active">国家予算をサンバースト図で表現する（その１）</li>
+            </ol>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8116442bd6e8ad"></script>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://crothel.github.io/blog/20180902.html"
+                       rel="bookmark"
+                       title="Permalink to 国家予算をサンバースト図で表現する（その１）">
+                        国家予算をサンバースト図で表現する（その１）
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-09-02T15:30:00+09:00"> 2018/09/02(日) </time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://crothel.github.io/blog/tag/python.html">python</a>
+        /
+	<a href="https://crothel.github.io/blog/tag/pandas.html">pandas</a>
+        /
+	<a href="https://crothel.github.io/blog/tag/ke-shi-hua.html">可視化</a>
+        /
+	<a href="https://crothel.github.io/blog/tag/yu-suan.html">予算</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180830.html">学習用の開発環境（Google Colaboratory）</a></h2>
-                <div class="summary"><p>Pythonとデータ分析の学習を進めるにあたって、できるだけ簡単に開発環境を整えたい。Google Colaboratoryが最も手っ取り早いだろう。</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180830.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180828.html">Pythonとデータ分析の学習コンテンツまとめ</a></h2>
-                <div class="summary"><p>無料でダウンロード又は利用できる、Pythonやデータ分析の学習コンテンツをまとめる。</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180828.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://crothel.github.io/blog/20180826.html">GithubPages + Pelicanでブログ構築</a></h2>
-                <div class="summary"><p>GithubPages + Pelicanによるブログの構築について。</p>
-                    <a class="btn btn-default btn-xs" href="https://crothel.github.io/blog/20180826.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+                <h2>1.はじめに</h2>
+<p>ニュースで概算要求の話題を聞く機会が増えてきた。<br>
+hogehoge省がfugafuga事業にN億円。億円という単位のせいで高めに聞こえるが、実のところ、それは高いのだろうか、低いのだろうか。いまいちピンとこない。</p>
+<p>&nbsp;</p>
+<p>事業の重要性を考えるという点では、全体の中での割合や前年度との比較をしてみるといいかもしれない。国家予算をわかりやすくビジュアライゼーションしようと思い立った。</p>
+<p>&nbsp;</p>
+<p>前々からやってみたいなと思っていた図にサンバースト図というものがある。今回は国家予算をサンバースト図で図示することを目指す。</p>
+<p>最終的な目標は下記参考を組み合わせたものだ。</p>
+<p>&nbsp;</p>
+<p>参考<br>
+- <a href="https://bl.ocks.org/kerryrodden/7090426">Sequences sunburst</a><br>
+- <a href="https://beta.observablehq.com/@mbostock/d3-zoomable-sunburst">D3 Zoomable Sunburst</a></p>
+<p>&nbsp;</p>
+<h2>2.データの入手と整形</h2>
+<p>&nbsp;</p>
+<h3>2-1.必要なデータ構造</h3>
+<p>上記参考サイトのように、D3.jsを用いればイメージするサンバースト図を作れそうである。</p>
+<p>必要なデータは以下のような階層構造を持ったデータ</p>
+<div class="highlight"><pre><span></span>var data =[
+   {
+      &quot;key&quot;: &quot;Complete&quot;,
+      &quot;values&quot;: [
+         {
+            &quot;key&quot;: &quot;MUST&quot;,
+            &quot;values&quot;: 5
+         },
+         {
+            &quot;key&quot;: &quot;SHOULD&quot;,
+            &quot;values&quot;: 5
+         },
+         {
+</pre></div>
+
+
+<p>以下のように、<code>d3.csv</code>や<code>d3.json</code>でデータを読み、<code>d3.nest()</code>を用いれば階層構造のデータを作ることができるようだ。</p>
+<div class="highlight"><pre><span></span>d3.json(JSONDATA_FILE_PATH, function (d) {
+            var nested_data = d3.nest()
+                .key(function(d) { return d.status; })
+                .key(function(d) { return d.priority; })
+                .rollup(function(leaves) {
+                    return leaves.length; })
+                .entries(d);
+            };
+</pre></div>
+
+
+<p>そこで、まずは親要素、子要素、孫要素や数値を、CSVのカラムやJSONのキーとしてデータをまとめることを目指す。</p>
+<p>なお、CSVでは数値を数値型として読み込めなかったので、最終的にはJSONとした。</p>
+<p>&nbsp;</p>
+<p>参考<br>
+- <a href="https://wizardace.com/d3-hierarchy/">D3.js v4/v5 hierarchy データ構造と使い方</a><br>
+- <a href="https://wizardace.com/d3-sunburst-base/">D3.js v4/v5 サンバースト図の作り方</a><br>
+- <a href="http://bl.ocks.org/phoebebright/raw/3176159/">D3 Nest Tutorial and examples</a></p>
+<p>&nbsp;</p>
+<h3>2-2.財務省データの加工</h3>
+<p>財務省のデータは<a href="https://www.bb.mof.go.jp/hdocs/bxss010bh30.html">こちら</a>。</p>
+<p>平成30年度の一般会計から、歳出予定経費要求書(科目別内訳)をサンバースト図で表現することにする。</p>
+<p>エクセルを開いてみると、シートは二つ。「一般会計 予定経費要求書（科目別内訳）」が今回使いたい表となる。</p>
+<p>ローカルにダウンロードしてから、とりあえず<code>pandas</code>で読み込んでみる。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;エクセルへのパス&#39;</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="s1">&#39;一般会計 予定経費要求書（科目別内訳）&#39;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">file</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+
+<p>ダウンロード直後の表は以下</p>
+<div class="highlight"><pre><span></span>所管   組織  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6  \
+0  皇室費  皇室費         NaN         NaN         NaN         NaN         NaN   
+1  NaN  NaN         1.0         NaN         NaN         NaN         NaN   
+2  NaN  NaN         NaN        95.0        11.0         2.0        12.0   
+3  NaN  NaN         2.0         NaN         NaN         NaN         NaN   
+4  NaN  NaN         NaN        95.0        11.0         2.0        12.0   
+
+   Unnamed: 7  Unnamed: 8 Unnamed: 9                         項目  \
+0         NaN         NaN        NaN                        NaN   
+1         NaN         NaN        内廷費                        NaN   
+2         9.0        99.0        NaN                      (内廷費)   
+3         NaN         NaN        宮廷費                        NaN   
+4         9.0         6.0        NaN                        諸謝金   
+
+   平成30年度要求額(千円)  前年度予算額(千円)  比較増△減額(千円)  
+0        9859615     6217637     3641978  
+1         324000      324000           0  
+2         324000      324000           0  
+3        9171445     5678917     3492528  
+4          38457       25756       12701
+</pre></div>
+
+
+<p>階層構造データのために必要なのは、予算のカテゴリー情報とその額だ。</p>
+<p>コード番号や前年度予算額、比較増減額などは捨てて良い。ついでに、いずれJavascriptで扱うことを考えて、カラム名を適当に付け直しておく。</p>
+<div class="highlight"><pre><span></span>file = file.iloc[:,[0,1,9,10,11]]
+file.columns = [&quot;jurisdiction&quot;, &quot;organization&quot;, &quot;item&quot;, &quot;subject&quot;, &quot;amount&quot;]
+</pre></div>
+
+
+<p><code>file.info()</code>で中身を見ると、次のようになっている。</p>
+<div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 7411 entries, 0 to 7410
+Data columns (total 5 columns):
+jurisdiction    17 non-null object
+organization    90 non-null object
+item            768 non-null object
+subject         6553 non-null object
+amount          7411 non-null int64
+dtypes: int64(1), object(4)
+</pre></div>
+
+
+<p>jurisdictionは所管。省庁名や裁判所、国会といった文字列。<br>
+organizationは組織。例えば国会なら衆議院、参議院、国立国会図書館。<br>
+itemとsubjectが予算の区分。amountが予算額だ。</p>
+<p>NaNが多いが、直前と同じカテゴリの場合は空白になっている。<br>
+amountの数は、90 + 768 + 6553 = 7441となっており、組織と大項目の合計値もそれぞれ記載されていることがうかがえる。<br>
+合計はJavascriptの方で行えば良い。jurisdictionからitemまでを補充したsubjectの列だけを抽出すれば良さそうだ。</p>
+<div class="highlight"><pre><span></span>#3つのカラムについて前方埋め
+file[[&quot;jurisdiction&quot;, &quot;organization&quot;, &quot;item&quot;]] = file[[&quot;jurisdiction&quot;, &quot;organization&quot;, &quot;item&quot;]].fillna(method=&quot;ffill&quot;)
+
+#NaNが残る列(&quot;subject&quot;がNanの列)を削除する。
+file = file.dropna()
+</pre></div>
+
+
+<p>最終的にはこんなデータフレームになる。</p>
+<div class="highlight"><pre><span></span>jurisdiction organization item subject   amount
+2          皇室費          皇室費  内廷費   (内廷費)   324000
+4          皇室費          皇室費  宮廷費     諸謝金    38457
+5          皇室費          皇室費  宮廷費     報償費   318877
+6          皇室費          皇室費  宮廷費      庁費  3938408
+7          皇室費          皇室費  宮廷費     招宴費    68492
+</pre></div>
+
+
+<p>このデータをJavascriptに読み込ませるため、csvかJsonで保存する（最終的にはJsonにした。）。</p>
+<p>pandasがつけたindexは不要なので落としている。</p>
+<div class="highlight"><pre><span></span>#CSVの場合
+file.to_csv(&#39;budget2018.csv&#39;, index=False)
+
+#Jsonの場合
+file.to_json(&#39;budget2018.json&#39;, orient=&#39;records&#39;)
+</pre></div>
+
+
+<p>&nbsp;</p>
+<h2>3.小括</h2>
+<p>以上で、Javascriptで扱うためのデータが完成した。</p>
+<p>後の工程でCSVのデータ型の問題を解決できず、最終的にはJsonを使用している。</p>
+<p>これを用いて、JavasicriptとD3.jsでサンバースト図を描画していく。</p>
+<p>&nbsp;</p>
+<p>表が綺麗だったので、全く引っかかることはなかった。</p>
+<p>前処理の練習が主目的だったのだが、後にJavascriptとD3.jsに苦戦したことを考えると、練習としてはよくない題材だったかもしれない。</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox"></div>
+    <!-- AddThis Button BEGIN -->
+    <!--
+    <div class="addthis_toolbox addthis_default_style">
+            <a class="addthis_button_hatena" ></a>
+            <a class="addthis_button_lineme"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+    </div>
+    -->
+    <!-- AddThis Button END -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -294,6 +486,7 @@ D3C blog            </a>
     <li class="list-group-item"><a href="https://crothel.github.io/blog/20180830.html">学習用の開発環境（Google Colaboratory）</a></li>
     <li class="list-group-item"><a href="https://crothel.github.io/blog/20180828.html">Pythonとデータ分析の学習コンテンツまとめ</a></li>
     <li class="list-group-item"><a href="https://crothel.github.io/blog/20180826.html">GithubPages + Pelicanでブログ構築</a></li>
+    <li class="list-group-item"><a href="https://crothel.github.io/blog/about.html">このブログについて</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -407,5 +600,7 @@ jQuery(document).ready(function($) {
 });
 });
 </script>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8116442bd6e8ad"></script>
 </body>
 </html>
