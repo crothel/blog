@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-09-02T15:30:00+09:00</updated><entry><title>国家予算をサンバースト図にする（その１）</title><link href="https://crothel.github.io/blog/20180902.html" rel="alternate"></link><published>2018-09-02T15:30:00+09:00</published><updated>2018-09-02T15:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-02:/blog/20180902.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。エクセルデータを整えてJsonにするまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1.はじめに&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-09-05T21:30:00+09:00</updated><entry><title>国家予算をサンバースト図にする（その２）</title><link href="https://crothel.github.io/blog/20180905.html" rel="alternate"></link><published>2018-09-05T21:30:00+09:00</published><updated>2018-09-05T21:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-05:/blog/20180905.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。JsonをD3.jsで読み込んでとりあえず描画するまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 前回まで&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;財務省からダウンロードしたデータを整えた。&lt;br&gt;
+これをD3.jsで読み込み、階層構造とし、サンバースト図で表現する。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;2. とりあえずサンプルを用いて表示&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&lt;br&gt;
+&lt;a href="https://crothel.github.io/national_budget/partition.html"&gt;平成３０年度予算のサンバースト図&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;が、こうするまでに、はじめてのJavascriptでつまり、「とりあえず満足」を得たので、詰まったところのメモに止める。&lt;br&gt;
+&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;サーバーを立てないとデータを読み込まない。&lt;/h4&gt;
+&lt;p&gt;これはJavascriptのせいというよりは、 ブラウザのセキュリティ対策に原因があるらしい。&lt;br&gt;
+&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;CSVで読み込まれるデータの型はオブジェクト&lt;/h4&gt;
+&lt;p&gt;Stringと数値型で扱いたかったのだが、ついに変換する方法を見つけることはできなかった。結局Jsonでやり直している。&lt;br&gt;
+&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;3. 今後（いつか）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;視認性が悪い。特に割合の低いデータの部分。&lt;ul&gt;
+&lt;li&gt;凡例を追加し、インタラクティブに。&lt;/li&gt;
+&lt;li&gt;パンくずを追加。どこを見ているかわかりやすいように。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;単位が千円だと数えにくい。&lt;br&gt;
+- カラーリングがイマイチ&lt;/li&gt;
+&lt;/ul&gt;</content><category term="javascript"></category><category term="d3.js"></category><category term="可視化"></category><category term="予算"></category></entry><entry><title>国家予算をサンバースト図にする（その１）</title><link href="https://crothel.github.io/blog/20180902.html" rel="alternate"></link><published>2018-09-02T15:30:00+09:00</published><updated>2018-09-02T15:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-02:/blog/20180902.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。エクセルデータを整えてJsonにするまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1.はじめに&lt;/h2&gt;
 &lt;p&gt;ニュースで概算要求の話題を聞く機会が増えてきた。&lt;br&gt;
 hogehoge省がfugafuga事業にN億円。億円という単位のせいで高めに聞こえるが、実のところ、それは高いのだろうか、低いのだろうか。いまいちピンとこない。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
