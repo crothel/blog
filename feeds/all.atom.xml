@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-09-05T21:30:00+09:00</updated><entry><title>国家予算をサンバースト図にする（その２）</title><link href="https://crothel.github.io/blog/20180905.html" rel="alternate"></link><published>2018-09-05T21:30:00+09:00</published><updated>2018-09-05T21:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-05:/blog/20180905.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。JsonをD3.jsで読み込んでとりあえず描画するまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 前回まで&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>D3C blog</title><link href="https://crothel.github.io/blog/" rel="alternate"></link><link href="https://crothel.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://crothel.github.io/blog/</id><updated>2018-09-15T15:00:00+09:00</updated><entry><title>GPyのインストールで詰まった話</title><link href="https://crothel.github.io/blog/2018091501.html" rel="alternate"></link><published>2018-09-15T15:00:00+09:00</published><updated>2018-09-15T15:00:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-15:/blog/2018091501.html</id><summary type="html">&lt;p&gt;GPyのインストールで詰まった件。原因はPython3.7でのCythonの変更&lt;/p&gt;</summary><content type="html">&lt;h2&gt;GPyのインストールで詰まった話&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;GPyというライブラリをpipでインストールしようとしたら、大量のエラーを吐いた。&lt;/p&gt;
+&lt;p&gt;調べてみると、Python3.7にアップグレードしたことによるCythonあるあるらしい。&lt;/p&gt;
+&lt;p&gt;scikit-learnなどcythonを使っているライブラリのインストールで詰まるはずだが、&lt;br&gt;
+活発なライブラリはすぐに更新されているということだろう。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h2&gt;解決策&lt;/h2&gt;
+&lt;p&gt;最新版をgithubなどで見つけてgit cloneし、pipを使わず直接インストールすると行ける場合がある。&lt;br&gt;
+&lt;br&gt;
+それでもいけない場合、ライブラリ側が未対応なので、自分でCythonを変換し直す必要がある。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;find Gpy -name '*.pyx'&lt;/code&gt;などとすると対象ファイルが見つかるので、それぞれファイルについて、&lt;code&gt;cython ファイル名&lt;/code&gt;とする。&lt;code&gt;find Gpy -name '*.pyx' -exec cython {} \;&lt;/code&gt;と１行でまとめることができる。&lt;/p&gt;
+&lt;p&gt;Gpyについては&lt;code&gt;Gpy/models/state_space_cython.pyx&lt;/code&gt;にミスがあった。&lt;br&gt;
+Cythonを適用しようとするとちゃんと指摘してくれるので、適宜修正すると良い。&lt;br&gt;
+（if文で':'がないとか、インデントが不揃いとか、初歩的なミス）&lt;/p&gt;</content><category term="python"></category><category term="cython"></category><category term="gpy"></category><category term="学習"></category></entry><entry><title>国家予算をサンバースト図にする（その２）</title><link href="https://crothel.github.io/blog/20180905.html" rel="alternate"></link><published>2018-09-05T21:30:00+09:00</published><updated>2018-09-05T21:30:00+09:00</updated><author><name>Mt Taka</name></author><id>tag:crothel.github.io,2018-09-05:/blog/20180905.html</id><summary type="html">&lt;p&gt;2018年度国家予算をサンバースト図で表現する。JsonをD3.jsで読み込んでとりあえず描画するまで。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 前回まで&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;財務省からダウンロードしたデータを整えた。&lt;br&gt;
 これをD3.jsで読み込み、階層構造とし、サンバースト図で表現する。&lt;/p&gt;
